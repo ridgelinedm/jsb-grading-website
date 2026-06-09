@@ -1,6 +1,6 @@
 # JSB Grading LLC — Website
 
-A minimalist, single-page static website for JSB Grading LLC, a land grading
+A minimalist, multi-page static website for JSB Grading LLC, a land grading
 company serving Greenville County and Upstate South Carolina.
 
 Built with plain HTML, CSS, and a few lines of JavaScript — no frameworks, no
@@ -9,11 +9,30 @@ build step. Ready to host anywhere, including GitHub Pages.
 ## Structure
 
 ```
-index.html        # the entire site (single page, anchor navigation)
-css/style.css     # all styles
-js/main.js        # mobile nav toggle + footer year
-img/              # logo and images
+index.html                 # homepage
+about.html                 # about Jeff / the company
+services.html              # all services overview
+residential-grading.html   # service detail page
+brush-cutting.html         # service detail page
+retaining-walls.html       # service detail page
+contact.html               # lead capture form + contact info
+css/style.css              # all styles
+js/main.js                 # mobile nav toggle + footer year
+img/                       # logo and images
 ```
+
+## Lead capture form
+
+The form on `contact.html` posts to [Formspree](https://formspree.io), which
+works on static hosting with no backend:
+
+1. Create a free Formspree account (50 submissions/month on the free tier).
+2. Create a new form pointed at `jsbgrading@gmail.com`.
+3. In `contact.html`, replace `YOUR_FORM_ID` in the form's `action` attribute
+   with the real form ID.
+
+Until that's done, the form will not deliver submissions — the call/email
+links still work regardless.
 
 ## Deploying to GitHub Pages
 
@@ -45,6 +64,3 @@ Once the client approves, point their domain at GitHub Pages:
 
 - Business details (phone, email, hours, services, testimonials) were sourced
   from the existing site at jsbgrading.com.
-- The contact section uses `tel:` / `mailto:` links. If a contact form is
-  wanted later, [Formspree](https://formspree.io) works on static hosting with
-  no backend.
